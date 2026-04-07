@@ -3,30 +3,30 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "SV-Code-Extension",
-    tagline: "Productivity Powerhouse",
-    description: "A custom VS Code extension designed to streamline development workflows and automate repetitive tasks for developers.",
-    tags: ["TypeScript", "VS Code API", "Node.js"],
-    image: "/project-vscode.jpg", // Replace with actual if available
-    links: { github: "https://github.com/Shivani2524/SV-Code-Extension", live: "#" },
+    title: "Neural-Sync",
+    tagline: "Merge Resolution Extension",
+    description: "Engineered the frontend architecture for an intelligent tool designed to automatically resolve complex semantic merge conflicts in Git workflows.",
+    tags: ["TypeScript", "React", "Node.js", "Tailwind CSS", "VS Code API"],
+    image: "/neural-sync.png",
+    links: { github: "https://github.com/Shivani2524/neuralsync", live: "#" },
     accent: "#A855F7"
   },
   {
-    title: "Computer Vision Agent",
-    tagline: "AI Surveillance",
-    description: "An intelligent security system that detects and tracks objects in real-time, providing automated alerts and analysis.",
-    tags: ["Python", "OpenCV", "TensorFlow"],
-    image: "/project-cv.jpg",
-    links: { github: "https://github.com/Shivani2524", live: "#" },
+    title: "Project Sentry",
+    tagline: "Deterministic SOAR System",
+    description: "Architected a Security Orchestration, Automation, and Response system to automate incident triaging and threat mitigation.",
+    tags: ["Python", "Security", "REST APIs"],
+    image: "/project-sentry.png",
+    links: { github: "https://github.com/Shivani2524/Sentry", live: "#" },
     accent: "#22D3EE"
   },
   {
-    title: "Personal Portfolio",
-    tagline: "Modern UI Showcase",
-    description: "This high-fidelity portfolio featuring Three.js animations, glassmorphism, and neon-themed cyber aesthetics.",
-    tags: ["Next.js", "Three.js", "Three Fiber"],
-    image: "/project-portfolio.jpg",
-    links: { github: "https://github.com/Shivani2524/Sentry", live: "#" },
+    title: "EcoScan AI",
+    tagline: "Computer Vision Agent",
+    description: "Developed an AI agent using real-time camera feeds to identify waste materials and generate sustainable recycling workflows.",
+    tags: ["Python", "OpenCV", "TensorFlow", "HTML5", "CSS3"],
+    image: "/ecoscan-ai.png",
+    links: { github: "https://github.com/Shivani2524/EcoScan-AI", live: "#" },
     accent: "#A855F7"
   }
 ];
@@ -53,9 +53,6 @@ export default function Projects() {
               Selected <span style={{ color: "var(--purple)" }} className="purple-text-glow">Projects</span>
             </h3>
           </div>
-          <p className="max-w-md text-[var(--text-secondary)] font-mono text-sm leading-relaxed text-right">
-             / Focusing on AI architectures, VS Code tooling, and seamless human-computer interaction.
-          </p>
         </div>
 
         {/* Project Grid */}
@@ -71,13 +68,15 @@ export default function Projects() {
             >
               {/* Image Container */}
               <div className="relative aspect-[16/10] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] to-transparent z-10" />
-                <div className="w-full h-full bg-[var(--bg-card-hover)] flex items-center justify-center text-[var(--text-muted)] text-4xl">
-                   {/* Placeholder for project image */}
-                   <span className="opacity-20">{project.title.charAt(0)}</span>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent z-10 pointer-events-none" />
+                <Image 
+                  src={project.image} 
+                  alt={project.title} 
+                  fill 
+                  className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
                 {/* Glowing border line at bottom of img */}
-                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[var(--purple)] to-transparent opacity-50" />
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[var(--purple)] to-transparent opacity-50 z-20" />
               </div>
 
               {/* Content */}
@@ -106,12 +105,14 @@ export default function Projects() {
                 </div>
 
                 {/* Footer / Buttons */}
-                <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-auto">
-                   <a href={project.links.github} target="_blank" className="text-xs font-mono text-[var(--text-secondary)] hover:text-white flex items-center gap-2">
-                      CODE <span className="text-[var(--purple)]">↗</span>
-                   </a>
-                   <a href={project.links.live} className="px-4 py-1.5 rounded-full text-[10px] font-mono font-bold tracking-widest text-white transition-all bg-[var(--purple)] hover:neon-border-anim">
-                      LIVE VIEW
+                <div className="flex items-center justify-center pt-6 border-t border-white/10 mt-auto">
+                   <a 
+                     href={project.links.github} 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     className="w-full text-center py-3 rounded-xl border border-[var(--purple)]/30 hover:border-[var(--purple)] bg-white/[0.02] hover:bg-[var(--purple)]/10 text-white font-mono text-[11px] font-bold tracking-[0.2em] transition-all hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] flex items-center justify-center gap-2 group/btn"
+                   >
+                      VIEW SOURCE CODE <span className="text-[var(--purple)] group-hover/btn:text-white transition-colors">↗</span>
                    </a>
                 </div>
               </div>

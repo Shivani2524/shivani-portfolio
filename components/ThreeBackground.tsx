@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useMemo, useEffect, useState } from "react";
+import { useRef, useMemo, useEffect, useState, memo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
@@ -13,8 +13,8 @@ function CursorReactiveParticles() {
   const { viewport } = useThree();
 
   const positions = useMemo(() => {
-    const arr = new Float32Array(4000 * 3);
-    for (let i = 0; i < 4000; i++) {
+    const arr = new Float32Array(1000 * 3);
+    for (let i = 0; i < 1000; i++) {
       // Spread particles in a large volume
       arr[i * 3]     = (Math.random() - 0.5) * 12;
       arr[i * 3 + 1] = (Math.random() - 0.5) * 12;
@@ -56,8 +56,8 @@ function CyanParticles() {
   const ref = useRef<any>(null);
 
   const positions = useMemo(() => {
-    const arr = new Float32Array(1500 * 3);
-    for (let i = 0; i < 1500; i++) {
+    const arr = new Float32Array(500 * 3);
+    for (let i = 0; i < 500; i++) {
       arr[i * 3]     = (Math.random() - 0.5) * 14;
       arr[i * 3 + 1] = (Math.random() - 0.5) * 14;
       arr[i * 3 + 2] = (Math.random() - 0.5) * 6;
@@ -98,13 +98,13 @@ function FloatingOrb({ position, color, scale }: { position: [number,number,numb
 
   return (
     <mesh ref={ref} position={position}>
-      <sphereGeometry args={[0.6, 16, 16]} />
+      <sphereGeometry args={[0.6, 8, 8]} />
       <meshBasicMaterial color={color} transparent opacity={0.06} />
     </mesh>
   );
 }
 
-export default function ThreeBackground() {
+const ThreeBackground = () => {
   // Track mouse position
   useEffect(() => {
     const onMove = (e: MouseEvent) => {
@@ -117,7 +117,7 @@ export default function ThreeBackground() {
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: 50 }} dpr={[1, 1]} gl={{ antialias: false }}>
         <fog attach="fog" args={["#030303", 8, 20]} />
         <CursorReactiveParticles />
         <CyanParticles />
@@ -127,4 +127,6 @@ export default function ThreeBackground() {
       </Canvas>
     </div>
   );
-}
+};
+
+export default memo(ThreeBackground);

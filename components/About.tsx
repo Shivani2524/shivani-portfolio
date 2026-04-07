@@ -31,21 +31,21 @@ export default function About() {
             <div className="relative aspect-[3/4] w-full max-w-[320px] mx-auto rounded-2xl overflow-hidden glass-card p-2 border-2"
               style={{ borderColor: "rgba(168,85,247,0.2)" }}
             >
-              <div className="relative h-full w-full rounded-xl overflow-hidden grayscale contrast-110">
+              <div className="relative h-full w-full rounded-xl overflow-hidden shadow-xl">
                 <Image
                   src="/profile.jpg"
                   alt="Shivani Sirisilla"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                {/* Visual filter overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--purple)]/20 to-transparent mix-blend-overlay" />
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
               </div>
             </div>
 
             {/* Decorative tag */}
             <div className="absolute -bottom-4 -right-4 glass-card px-4 py-2 rounded-lg border border-[var(--purple)]/30 purple-glow">
-               <span className="font-mono text-xs text-white">Full-Stack AI</span>
+               <span className="font-mono text-xs text-white">AI Engineer</span>
             </div>
           </div>
 
@@ -63,22 +63,22 @@ export default function About() {
 
             <div className="space-y-6 text-[var(--text-secondary)] leading-relaxed text-lg max-w-2xl">
               <p>
-                I am <span className="text-white font-600">Shivani Sirisilla</span>, a final-year CS student at Sri Venkateshwara Institute of Technology. 
-                My journey in tech is driven by a deep fascination with how code can transform raw data into intelligent human-centric experiences.
+                I am <span className="text-white font-600">Shivani Sirisilla</span>, a proactive Computer Science Engineering student at Swami Vivekananda Institute of Technology. 
+                My journey in tech is driven by a strong focus on Artificial Intelligence, Data Science, and full-stack software development.
               </p>
               <p>
-                With a strong foundation in <span className="text-[var(--cyan)] font-mono">React</span>, <span className="text-[var(--cyan)] font-mono">Node.js</span>, and <span className="text-[var(--cyan)] font-mono">Python</span>, 
-                I specialize in developing full-stack applications that leverage AI to solve complex problems. 
-                I&apos;ve built everything from VS Code productivity tools to sophisticated Computer Vision surveillance systems.
+                With a robust foundation in <span className="text-[var(--cyan)] font-mono">Python</span>, <span className="text-[var(--cyan)] font-mono">C</span>, and <span className="text-[var(--cyan)] font-mono">JavaScript</span>,
+                and a deep proficiency in AI development tools like <span className="text-[var(--cyan)] font-mono">Cursor</span> and <span className="text-[var(--cyan)] font-mono">Antigravity</span>,
+                I am experienced in building practical applications that range from intelligent developer workflows to deterministic security systems. 
+                My passion lies in writing clean code and leveraging modern tech stacks to solve complex, real-world problems.
               </p>
             </div>
 
             {/* Feature Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
               {[
-                { label: "Education", val: "B.Tech CSE", sub: "SVIT '25", icon: "🎓" },
+                { label: "Education", val: "B.Tech CSE", sub: "SVIT '27", icon: "🎓" },
                 { label: "Experience", val: "Internship", sub: "YugaYatra", icon: "💼" },
-                { label: "Community", val: "Hackathons", sub: "HackForge Host", icon: "🏆" },
               ].map((card) => (
                 <div 
                   key={card.label}

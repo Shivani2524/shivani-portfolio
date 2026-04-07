@@ -5,9 +5,9 @@ import ThreeBackground from "./ThreeBackground";
 
 const roles = [
   "AI Engineer",
+  "Software Engineer",
   "Full-Stack Developer",
-  "Computer Vision Builder",
-  "Tech Explorer",
+  "Data Science Enthusiast",
 ];
 
 export default function Hero() {
@@ -69,32 +69,25 @@ export default function Hero() {
             Hi! I&apos;m
           </p>
 
-          {/* Name — giant outlined title */}
+          {/* Name — Professional Solid Colors */}
           <h1
-            className="font-display leading-none mb-2 animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
+            className="font-sans leading-none mb-4 animate-fade-up tracking-tight"
+            style={{ animationDelay: "0.1s", fontFamily: "'Inter', 'Roboto', sans-serif" }}
           >
             <span
-              className="block"
+              className="block text-white"
               style={{
-                fontSize: "clamp(3rem, 8vw, 7rem)",
+                fontSize: "clamp(3.5rem, 8vw, 6.5rem)",
                 fontWeight: 800,
-                WebkitTextFillColor: "transparent",
-                WebkitTextStroke: "2px rgba(255,255,255,0.9)",
-                letterSpacing: "-0.02em",
               }}
             >
               SHIVANI
             </span>
             <span
-              className="block"
+              className="block text-gray-400"
               style={{
-                fontSize: "clamp(3rem, 8vw, 7rem)",
+                fontSize: "clamp(3.5rem, 8vw, 6.5rem)",
                 fontWeight: 800,
-                WebkitTextFillColor: "transparent",
-                WebkitTextStroke: "2px var(--purple)",
-                letterSpacing: "-0.02em",
-                textShadow: "0 0 40px rgba(168,85,247,0.3)",
               }}
             >
               SIRISILLA
@@ -114,9 +107,10 @@ export default function Hero() {
             className="text-[var(--text-secondary)] text-base leading-relaxed max-w-lg mb-8 mx-auto lg:mx-0 animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
-            CS student at SVIT, building intelligent systems at the intersection
-            of AI and full-stack engineering. From VS Code extensions to computer
-            vision agents — I write code that solves real problems.
+            CSE student at SVIT with a strong focus on Artificial Intelligence, 
+            Data Science, and full-stack software development. Passionate about 
+            writing clean code and leveraging modern tech stacks to solve complex, 
+            real-world problems.
           </p>
 
           {/* Availability badge */}
@@ -137,22 +131,36 @@ export default function Hero() {
           {/* CTA buttons */}
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-up mb-12" style={{ animationDelay: "0.4s" }}>
             <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 font-mono text-sm tracking-widest rounded-lg transition-all duration-300 hover:scale-105"
+              style={{ 
+                background: "linear-gradient(90deg, var(--purple) 0%, var(--cyan) 100%)", 
+                color: "#fff", 
+                fontWeight: 700,
+                boxShadow: "0 0 20px rgba(34,211,238,0.4), inset 0 0 10px rgba(255,255,255,0.2)" 
+              }}
+            >
+              RESUME 📄
+            </a>
+            <a
               href="#projects"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-7 py-3 font-mono text-sm tracking-wider rounded-lg transition-all duration-300 hover:scale-105 purple-glow neon-border-anim"
-              style={{ background: "var(--purple)", color: "#fff", fontWeight: 600 }}
+              className="px-7 py-3 font-mono text-sm tracking-wider rounded-lg transition-all duration-300 hover:scale-105 border glass-card"
+              style={{ borderColor: "rgba(168,85,247,0.3)", color: "#fff" }}
             >
-              View Projects →
+              Projects →
             </a>
             <a
               href="https://github.com/Shivani2524"
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-3 font-mono text-sm tracking-wider rounded-lg border transition-all duration-300 hover:scale-105 glass-card"
-              style={{ borderColor: "rgba(168,85,247,0.3)", color: "var(--purple)" }}
+              style={{ borderColor: "rgba(168,85,247,0.3)", color: "var(--text-secondary)" }}
             >
               GitHub ↗
             </a>
@@ -180,15 +188,15 @@ export default function Hero() {
 
         {/* ── Right: grayscale portrait ── */}
         <div className="hidden lg:flex flex-col items-center gap-6 animate-fade-up flex-shrink-0" style={{ animationDelay: "0.2s" }}>
-          {/* Profile photo — grayscale */}
-          <div className="relative">
+          {/* Profile photo — original color + simple hover effect */}
+          <div className="relative group">
             {/* Outer neon ring */}
             <div
-              className="absolute -inset-3 rounded-full opacity-50 blur-xl neon-border-anim"
+              className="absolute -inset-3 rounded-full opacity-50 blur-xl neon-border-anim group-hover:opacity-80 transition-opacity duration-500"
               style={{ background: "radial-gradient(circle, var(--purple) 0%, var(--cyan) 100%)" }}
             />
             <div
-              className="relative w-60 h-60 rounded-full overflow-hidden border-2"
+              className="relative w-60 h-60 rounded-full overflow-hidden border-2 shadow-xl"
               style={{
                 borderColor: "rgba(168,85,247,0.5)",
                 boxShadow: "0 0 40px rgba(168,85,247,0.2), 0 0 80px rgba(168,85,247,0.08)",
@@ -198,14 +206,8 @@ export default function Hero() {
                 src="/profile.jpg"
                 alt="Shivani Sirisilla"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 priority
-                style={{ filter: "grayscale(100%) contrast(1.1)" }}
-              />
-              {/* Purple color overlay blend */}
-              <div
-                className="absolute inset-0"
-                style={{ background: "linear-gradient(135deg, rgba(124,58,237,0.15), rgba(34,211,238,0.05))", mixBlendMode: "color" }}
               />
             </div>
           </div>

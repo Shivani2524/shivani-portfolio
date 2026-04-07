@@ -56,8 +56,7 @@ export default function Footer() {
             <div className="space-y-6">
               {[
                 { label: "Email", val: "shivanisirisilla@gmail.com", link: "mailto:shivanisirisilla@gmail.com" },
-                { label: "Location", val: "Hyderabad, India", link: "#" },
-                { label: "Phone", val: "+91 85558 77717", link: "tel:+918555877717" }
+                { label: "Location", val: "Hyderabad, India", link: "#" }
               ].map(item => (
                 <div key={item.label} className="group">
                   <div className="text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1">{item.label}</div>
@@ -144,14 +143,25 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 text-[var(--text-muted)] font-mono text-[10px] tracking-widest uppercase">
-          <div>© 2025 SHIVANI SIRISILLA . ALL RIGHTS RESERVED</div>
-          <div className="flex gap-8">
-             <a href="https://github.com/Shivani2524" className="hover:text-white transition-colors">GitHub</a>
-             <a href="https://linkedin.com/in/shivani-sirisilla-67034929b/" className="hover:text-white transition-colors">LinkedIn</a>
-             <a href="#" className="hover:text-white transition-colors">Instagram</a>
+        <div className="mt-32 pt-12 border-t border-white/5 flex justify-center pb-8">
+          <div className="flex gap-6">
+             <a 
+               href="https://github.com/Shivani2524" 
+               target="_blank"
+               rel="noopener noreferrer"
+               className="px-10 py-4 bg-white/[0.03] rounded-xl border-2 border-[var(--cyan)] text-[var(--cyan)] font-mono text-sm sm:text-base tracking-[0.2em] font-bold uppercase transition-all duration-200 transform hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(34,211,238,0.3)] shadow-[0_6px_0_rgba(34,211,238,0.8)] active:translate-y-1 active:shadow-[0_0px_0_rgba(34,211,238,0.8)] relative"
+             >
+               GITHUB ↗
+             </a>
+             <a 
+               href="https://linkedin.com/in/shivani-sirisilla-67034929b/" 
+               target="_blank"
+               rel="noopener noreferrer"
+               className="px-10 py-4 bg-white/[0.03] rounded-xl border-2 border-[var(--purple)] text-[var(--purple)] font-mono text-sm sm:text-base tracking-[0.2em] font-bold uppercase transition-all duration-200 transform hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(168,85,247,0.3)] shadow-[0_6px_0_rgba(168,85,247,0.8)] active:translate-y-1 active:shadow-[0_0px_0_rgba(168,85,247,0.8)] relative"
+             >
+               LINKEDIN ↗
+             </a>
           </div>
-          <div>B.TECH CSE · SVIT</div>
         </div>
       </div>
     </footer>

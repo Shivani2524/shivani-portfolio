@@ -2,30 +2,30 @@
 
 const experiences = [
   {
-    company: "YugaYatra",
+    company: "YugaYatra Retail OPC Private Limited",
     role: "Software Engineer Intern",
-    period: "May 2024 - June 2024",
-    description: "Built the front-end for a hotel management system and a responsive official website, enhancing the firm's online visibility and internal operations.",
-    tech: ["React", "Express", "Node.js", "Context API"],
+    period: "Mar 2026 - Present",
+    description: "Engineering web applications and integrating backend services with Firebase Studio for scalable digital solutions. Utilizing AI development tools to gain real-world web development experience.",
+    tech: ["Cursor AI", "Firebase Studio", "AI Technologies"],
     type: "Internship"
   },
   {
-    company: "HackForge Host",
-    role: "Tech Workshop Lead",
-    period: "2023 - Present",
-    description: "Organized technical workshops and events for the CS community, mentoring junior developers in full-stack and AI concepts.",
-    tech: ["Community Management", "Public Speaking", "Mentorship"],
-    type: "Leadership"
+    company: "HackForge National Level Hackathon",
+    role: "4th Place Winner",
+    period: "Mar 2026",
+    description: "Developed Neural-Sync, a VS Code extension utilizing AI and Abstract Syntax Trees (ASTs) for intelligent, semantic merge conflict resolution.",
+    tech: ["AI", "ASTs", "VS Code Extension API"],
+    type: "Achievement"
   }
 ];
 
 const education = [
   {
-    school: "Sri Venkateshwara Institute of Technology",
-    degree: "B.Tech in Computer Science and Engineering",
-    period: "2021 - 2025",
-    gpa: "8.1 / 10",
-    details: "Focusing on AI, Machine Learning, and Web Technologies."
+    school: "Swami Vivekananda Institute of Technology",
+    degree: "B.Tech in Computer Science",
+    period: "Sept 2023 - May 2027",
+    gpa: "8.1 / 10.0",
+    details: "Coursework: Data Structures, Computer Networking, Operating Systems, DBMS, Data Analytics"
   }
 ];
 
