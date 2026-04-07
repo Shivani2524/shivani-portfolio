@@ -1,3 +1,4 @@
+// Trigger redeploy: 2026-04-07
 import type { Metadata } from "next";
 import "./globals.css";
 
